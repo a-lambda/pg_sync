@@ -9,9 +9,9 @@ jobs:
     steps:
       - name: Testing Secrets
         run: |
-          echo "$DB_HOST"
+          echo "$DB_HOSTNAME"
         env:
-          DB_HOST: ${{ secrets.DB_HOST }}
+          DB_HOSTNAME: ${{ secrets.DB_HOSTNAME }}
       - name: Environment variables
         run: |
           echo "GITHUB_ACTION: ${GITHUB_ACTION}"
