@@ -1,0 +1,9 @@
+name: robin
+run-name: Initialisation de la base de données robin
+on: [push]
+jobs:
+  test-output:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test Output
+        run: echo "Ceci est un test de bon fonctionnement"
