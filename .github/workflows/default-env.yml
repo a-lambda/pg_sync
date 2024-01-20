@@ -1,0 +1,25 @@
+# https://youtu.be/a8N6_tzdSfE
+name: Default environment variables
+
+on: push
+
+jobs:
+  default-env-variables:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Testing Secrets
+        run: |
+          echo "$DB_HOST"
+        env:
+          DB_HOST: ${{ secrets.DB_HOST }}
+      - name: Environment variables
+        run: |
+          echo "GITHUB_ACTION: ${GITHUB_ACTION}"
+          echo "HOME: ${HOME}"
+          echo "GITHUB WORKSPACE: ${GITHUB_WORKSPACE}"
+          echo "GITHUB_API_URL ${GITHUB_API_URL}"
+          echo "GITHUB_EVENT_PATH: ${GITHUB_EVENT_PATH}"
+          echo "GITHUB_JOB: ${GITHUB_JOB}"
+          echo "GITHUB_REPOSITORY: ${GITHUB_REPOSITORY}"
+          echo "GITHUB_SHA: ${GITHUB_SHA}"
+          echo "RUNNER_OS: ${RUNNER_OS}"
