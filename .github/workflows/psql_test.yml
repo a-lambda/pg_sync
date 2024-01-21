@@ -12,7 +12,7 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install postgresql-client
-        PGPASSWORD=$DB_PASSWORD psql -h $DB_HOSTNAME -d $DB_NAME -p $DB_PORT -U $DB_USER -c "select count(*) from elu;"
+        PGPASSWORD=$DB_PASSWORD psql -h $DB_HOSTNAME -d $DB_NAME -p $DB_PORT -U $DB_USER -c "create database mabasetest;"
       env: 
         DB_HOSTNAME: ${{ secrets.DB_HOSTNAME }}
         DB_USER: ${{ secrets.DB_USER }}

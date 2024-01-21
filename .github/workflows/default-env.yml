@@ -1,7 +1,9 @@
 # https://youtu.be/a8N6_tzdSfE
 name: Default environment variables
 
-on: push
+on: 
+  push:
+    branches: test
 
 jobs:
   default-env-variables:
