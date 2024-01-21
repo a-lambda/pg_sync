@@ -11,6 +11,7 @@ jobs:
     - name: Install postgresql client
       run: |
         PGPASSWORD=$DB_PASSWORD psql -h $DB_HOSTNAME -d $DB_NAME -p $DB_PORT -U $DB_USER -c "select version();"
+        PGPASSWORD=$DB_PASSWORD psql -h $DB_HOSTNAME -d $DB_NAME -p 5434 -U $DB_USER -c "select version();"
       env: 
         DB_HOSTNAME: ${{ secrets.DB_HOSTNAME }}
         DB_USER: ${{ secrets.DB_USER }}
