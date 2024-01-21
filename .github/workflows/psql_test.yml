@@ -10,6 +10,7 @@ jobs:
     steps:
     - name: Install postgresql client
       run: |
+        WK_DIR=${GITHUB_REPOSITORY}/SQL
         PGPASSWORD=$DB_PASSWORD psql -h $DB_HOSTNAME -d $DB_NAME -p $DB_PORT -U $DB_USER -f pi_sql_requests.sql
       working-directory: $WK_DIR
       env: 
@@ -18,4 +19,3 @@ jobs:
         DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
         DB_PORT: ${{ secrets.DB_PORT }}
         DB_NAME: ${{ secrets.DB_NAME }}   
-        WK_DIR: "${GITHUB_REPOSITORY}/SQL"
