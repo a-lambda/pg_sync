@@ -10,7 +10,8 @@ jobs:
     steps:
     - name: Install postgresql client
       run: |
-        PGPASSWORD=$DB_PASSWORD psql -h $DB_HOSTNAME -d $DB_NAME -p $DB_PORT -U $DB_USER -f SQL/pi_sql_requests.sql
+        PGPASSWORD=$DB_PASSWORD psql -h $DB_HOSTNAME -d $DB_NAME -p $DB_PORT -U $DB_USER -f pi_sql_requests.sql
+      working-directory: ./SQL
       env: 
         DB_HOSTNAME: ${{ secrets.DB_HOSTNAME }}
         DB_USER: ${{ secrets.DB_USER }}
