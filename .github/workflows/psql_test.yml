@@ -8,7 +8,7 @@ jobs:
   play-sql:
     runs-on: ubuntu-latest
     steps:
-    # - uses: actions/checkout@v3
+    - uses: actions/checkout@v3
     - name: Execute postgresql file
       run: |
         PGPASSWORD=$DB_PASSWORD psql -h $DB_HOSTNAME -d $DB_NAME -p $DB_PORT -U $DB_USER -f SQL/pi_sql_requests.sql
