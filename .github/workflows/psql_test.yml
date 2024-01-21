@@ -8,6 +8,8 @@ jobs:
   show-data:
     runs-on: ubuntu-latest
     steps:
+    - name: Get directory
+      run: ls
     - name: Install postgresql client
       run: |
         PGPASSWORD=$DB_PASSWORD psql -h $DB_HOSTNAME -d $DB_NAME -p $DB_PORT -U $DB_USER -f "SQL/pi_sql_requests.sql"
