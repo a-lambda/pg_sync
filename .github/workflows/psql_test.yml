@@ -1,0 +1,21 @@
+name: robin
+run-name: Initialisation de la base de données robin
+on:
+  push:
+    branches: main
+
+jobs:
+  show-data:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install postgresql client
+      run: |
+        sudo apt-get update
+        sudo apt-get install postgresql-client
+        PGPASSWORD=$DB_PASSWORD psql -h $DB_HOSTNAME -d $DB_NAME -p $DB_PORT -U $DB_USER -c "select count(*) from elu;"
+      env: 
+        DB_HOSTNAME: ${{ secrets.DB_HOSTNAME }}
+        DB_USER: ${{ secrets.DB_USER }}
+        DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+        DB_PORT: ${{ secrets.DB_PORT }}
+        DB_NAME: ${{ secrets.DB_NAME }}   
