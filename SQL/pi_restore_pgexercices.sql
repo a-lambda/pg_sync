@@ -1,10 +1,10 @@
--- DROP DATABASE IF EXISTS exercises;
+DROP DATABASE IF EXISTS exercises;
 
 --
 -- PostgreSQL database dump
 --
--- CREATE DATABASE exercises;
--- \c exercises
+CREATE DATABASE exercises;
+\c exercises
 CREATE SCHEMA cd;
 
 -- Dumped from database version 9.2.0

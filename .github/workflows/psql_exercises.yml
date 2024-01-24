@@ -11,7 +11,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: Execute postgresql file
       run: |
-        PGPASSWORD=$DB_PASSWORD psql -h $DB_HOSTNAME -d exercises -p $DB_PORT -U $DB_USER -f SQL/pi_restore_pgexercices.sql
+        PGPASSWORD=$DB_PASSWORD psql -h $DB_HOSTNAME -d $DB_NAME -p $DB_PORT -U $DB_USER -f SQL/pi_restore_pgexercices.sql
       env: 
         DB_HOSTNAME: ${{ secrets.DB_HOSTNAME }}
         DB_USER: ${{ secrets.DB_USER }}
