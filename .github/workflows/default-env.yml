@@ -3,7 +3,7 @@ name: Default environment variables
 
 on: 
   push:
-    branches: test
+    branches: main
 
 jobs:
   default-env-variables:

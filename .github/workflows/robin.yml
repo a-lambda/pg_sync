@@ -2,7 +2,7 @@ name: robin
 run-name: Initialisation de la base de données robin
 on:
   push:
-    branches: test
+    branches: main
 
 jobs:
   show-data:
