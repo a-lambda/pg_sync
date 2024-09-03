@@ -20,7 +20,7 @@ jobs:
           any::tidyverse
 
     - name: Check out repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Show table in postgresql database
       run: Rscript -e 'source("show_pg_tables.R")'
