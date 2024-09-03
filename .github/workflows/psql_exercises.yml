@@ -1,4 +1,4 @@
-name: pi_psql
+name: pi5_psql
 run-name: Installation de la base exercices postgreSQL
 on:
   push:
