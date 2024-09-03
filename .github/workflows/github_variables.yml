@@ -1,5 +1,6 @@
 # https://youtu.be/a8N6_tzdSfE
-name: Display github variables
+name: Display_github_variables
+run-name: Display github variables
 
 on: 
   push:
