@@ -1,5 +1,5 @@
 # https://youtu.be/a8N6_tzdSfE
-name: Default environment variables
+name: Display github variables
 
 on: 
   push:
@@ -9,12 +9,12 @@ jobs:
   default-env-variables:
     runs-on: ubuntu-latest
     steps:
-      - name: Testing Secrets
+      - name: 1 - Testing Secrets variables
         run: |
           echo "$DB_HOSTNAME"
         env:
           DB_HOSTNAME: ${{ secrets.DB_HOSTNAME }}
-      - name: Environment variables
+      - name: 2 - Display Environment variables
         run: |
           echo "GITHUB_ACTION: ${GITHUB_ACTION}"
           echo "HOME: ${HOME}"
