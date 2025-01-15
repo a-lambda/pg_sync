@@ -1,3 +1,3 @@
-\c cpam
+\c alcor
 select version();
 select srid from spatial_ref_sys order by srid desc limit 20;
