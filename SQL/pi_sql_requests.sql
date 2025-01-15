@@ -1,3 +1,3 @@
 \c cpam
 select version();
-select count(distinct elu_nom) from elu;
+select srid from spatial_ref_sys order by srid desc limit 20;
