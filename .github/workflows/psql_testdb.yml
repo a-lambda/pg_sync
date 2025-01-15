@@ -1,4 +1,4 @@
-name: pi5_testdb
+name: pi52_testdb
 run-name: Test postgresql request
 on:
   push:
